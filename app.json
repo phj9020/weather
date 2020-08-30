@@ -4,7 +4,7 @@
     "slug": "weather",
     "version": "1.0.0",
     "privacy": "public",
-    "sdkVersion": "35.0.0",
+    "sdkVersion": "38.0.0",
     "platforms":["ios", "android","web"],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
