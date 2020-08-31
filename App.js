@@ -15,15 +15,13 @@ export default class extends React.Component {
     }catch(error){
       Alert.alert("Cant find you")
       }
-    }
+    };
     
     
-  };
-
   componentDidMount() {
     this.getLocation();
-  }
+  };
   render() {
     return <Loading />;
   }
-
+}
