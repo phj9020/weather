@@ -71,13 +71,13 @@ export default function Weather({ temp, condition }) {
   return (
     <LinearGradient
       // Button Linear Gradient
-      colors={weatherOptions["Wind"].gradient}
+      colors={weatherOptions[condition].gradient}
       style={styles.container}
     >
       <StatusBar barStyle="light-content" />
       <View style={styles.halfContainer}>
         <MaterialCommunityIcons
-          name={weatherOptions["Wind"].iconName}
+          name={weatherOptions[condition].iconName}
           size={96}
           color="white"
         />
@@ -85,9 +85,9 @@ export default function Weather({ temp, condition }) {
       </View>
       {/* {...styles.halfContainer, ...styles.textContainer} 두개에 같이 스타일 주는 es6방식 */}
       <View style={{ ...styles.halfContainer, ...styles.textContainer }}>
-        <Text style={styles.title}>{weatherOptions["Wind"].title}</Text>
+        <Text style={styles.title}>{weatherOptions[condition].title}</Text>
         <Text style={styles.subtitle}>
-          {weatherOptions["Wind"].subtitle}
+          {weatherOptions[condition].subtitle}
         </Text>
       </View>
     </LinearGradient>
