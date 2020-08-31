@@ -71,13 +71,13 @@ export default function Weather({ temp, condition }) {
   return (
     <LinearGradient
       // Button Linear Gradient
-      colors={weatherOptions[condition].gradient}
+      colors={weatherOptions["Wind"].gradient}
       style={styles.container}
     >
       <StatusBar barStyle="light-content" />
       <View style={styles.halfContainer}>
         <MaterialCommunityIcons
-          name={weatherOptions[condition].iconName}
+          name={weatherOptions["Wind"].iconName}
           size={96}
           color="white"
         />
@@ -85,9 +85,9 @@ export default function Weather({ temp, condition }) {
       </View>
       {/* {...styles.halfContainer, ...styles.textContainer} 두개에 같이 스타일 주는 es6방식 */}
       <View style={{ ...styles.halfContainer, ...styles.textContainer }}>
-        <Text style={styles.title}>{weatherOptions[condition].title}</Text>
+        <Text style={styles.title}>{weatherOptions["Wind"].title}</Text>
         <Text style={styles.subtitle}>
-          {weatherOptions[condition].subtitle}
+          {weatherOptions["Wind"].subtitle}
         </Text>
       </View>
     </LinearGradient>
@@ -129,15 +129,19 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 44,
     fontWeight: "300",
+    textAlign: "left",
     marginBottom: 10,
   },
   subtitle: {
     color: "white",
     fontWeight: "600",
     fontSize: 24,
+    textAlign: "left"
   },
   textContainer: {
-    paddingHorizontal: 20,
+    flex:1,
+    paddingHorizontal: 40,
+    justifyContent: "center",
     alignItems: "flex-start",
   },
 });
